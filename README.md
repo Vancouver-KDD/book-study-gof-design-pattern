@@ -37,7 +37,7 @@
 ## 💾 Rule of PR 
 - Subject: 
   ~~~
-  [Name] subject
+  [Name] <subject>
 
   (e.g. [Yongju] Abstract Factory)
   ~~~
@@ -45,9 +45,9 @@
 
 - File Name: 
   ~~~
-  yyyy-MM-dd-subject.md
+  <subject>-<name>.md
   
-  (e.g.. 2022-05-24-abstract-factory.md)
+  (e.g. abstract-factory-yongju.md)
   ~~~
 
 - Please add a separate folder for images
