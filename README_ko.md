@@ -44,9 +44,9 @@
   
 - 파일 이름: 
   ~~~
-  yyyy-MM-dd-subject.md
-
-  (예. 2022-05-24-abstract-factory.md)
+  <subject>-<name>.md
+  
+  (예. abstract-factory-yongju.md)
   ~~~
   
 - 이미지는 images 폴더에 따로 저장해 주세요
