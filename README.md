@@ -9,7 +9,7 @@
 - Getting various perspectives from others through discussions
 
 ## 🗓 Period 
-2022.09.12(Mon) - 2022.10.17(Mon) (6 weeks, OT in the first week)  
+2022.09.12(Mon) - 2022.10.24(Mon) (7 weeks, OT in the first week)  
 1 or 2 weeks may be added depends on the process
 
 ## ❓ How to 
@@ -19,7 +19,7 @@
 - Presenters posts the presentation with their example (The presentation will help others understand)
 - Commit your own examples, but it could be the same one in the book
 - Make a **pull request** of examples and presentation by **every Sunday 23:59:59**
-- **Presentations** are given on **8pm every Monday**
+- **Presentations** are given on **8pm every Monday** (10.10 meeting will be put off to 10.12 due to Thanksgiving day)
 - Posting and presentation can be written and conducted with a preferred language, either **English** or **Korean**
 - Please use English as much as possible for the terms
 
