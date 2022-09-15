@@ -1,6 +1,7 @@
 # [Subin] Builder
 
 > 문제 제기
+
 예를 들어, `House`라는 객체를 만든다고 생각해보자. 
 기본적인 House를 만들기 위해, 4개의 벽, 바닥, 현관문, 창문, 지붕 등이 필요하다. 그런데 만약 더 큰 집이나, 창이 더 많은 집, 뒷마당 있는 집, 혹은 난방 시스템, 배관과 같은 업데이트가 필요한 집이라면 어떨까?
 
@@ -11,6 +12,7 @@
 하지만 이 방법 또한 문제점이 있다. 쓰이지 않는 parameter들을 관리하기 어렵다는 점이다. 예를 들어, 우리가 필요한 집은 수영장이 있는 집이라면, hasGarage, hasStatues, hasGarden 과 같은 parameter들은 null 값으로 줄줄이 채워넣어야 한다. 
 
 > 해결책
+
 그렇다면 우리가 객체를 생성할 때 쓰는 construction 코드를 해당 클래스에서 빼내보자. 그리고 그 코드를 builder라고 하는 다른 독립적인 객체에 옮겨주는 것이다. 
 
 e.g. HouseBuilder 클래스 > buildWalls(), buildDoors(), buildWindows(), buildRoof(), buildGarage(), getResult(): House
@@ -188,3 +190,4 @@ class Builder {
 ## Sources
 - Erich Gamma, John Vlissides, Ralph Johnson, Richard Helm, *Design Patterns: Elements of Reusable Object-Oriented Software*, Addison-Wesley, 1994, pp.97-106.
 - https://refactoring.guru/design-patterns/builder
+- https://www.geeksforgeeks.org/builder-design-pattern/
