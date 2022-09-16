@@ -2,19 +2,24 @@ package me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory
 
 import me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory.brian.ingredients.*;
 
-public class MexicoPizzaIngredientFactory implements IngredientFactory {
+public class CombinationPizzaIngredientFactory implements IngredientFactory {
+
+    @Override
+    public String getPizzaName() {
+        return "Combination Pizza";
+    }
     @Override
     public Dough createDough() {
-        return new FlourDough();
+        return new RiceDough();
     }
 
     @Override
     public Source createSource() {
-        return new TomatoSource();
+        return new WhiteSource();
     }
 
     @Override
     public Cheese createCheese() {
-        return new MozzarellaCheese();
+        return new CheddarCheese();
     }
 }

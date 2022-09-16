@@ -2,19 +2,25 @@ package me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory
 
 import me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory.brian.ingredients.*;
 
-public class NYPizzaIngredientFactory implements IngredientFactory {
+public class CheesePizzaIngredientFactory implements IngredientFactory {
+
+    @Override
+    public String getPizzaName() {
+        return "Cheese Pizza";
+    }
+
     @Override
     public Dough createDough() {
-        return new RiceDough();
+        return new FlourDough();
     }
 
     @Override
     public Source createSource() {
-        return new WhiteSource();
+        return new TomatoSource();
     }
 
     @Override
     public Cheese createCheese() {
-        return new CheddarCheese();
+        return new MozzarellaCheese();
     }
 }
