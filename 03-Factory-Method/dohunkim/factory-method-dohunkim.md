@@ -1,4 +1,4 @@
-`Product`<sub>Page</sub> and  `ConcreteProduct`<sub>All other classes</sub>
+`Product`<sub>Page</sub>  and `ConcreteProduct`<sub>All other classes</sub>
 ```c#
     abstract class Page { }
     class SkillsPage : Page { }
