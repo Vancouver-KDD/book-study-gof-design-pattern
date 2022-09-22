@@ -1,8 +1,5 @@
 name: automerge
 on:
-  pull_request:
-    paths-ignore:
-      - '_Presentations/**'
   schedule:
     - cron: '59 6 * * *'
     
