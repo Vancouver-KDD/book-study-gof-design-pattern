@@ -10,6 +10,13 @@
 - 3rd-party data/legacy code
 ![alt text](https://refactoring.guru/images/patterns/diagrams/adapter/problem-en-2x.png?id=f6f4bfbd2d6136a5ae4fb8c899e9854e "Motivation 2")
 
+### Applicability
+- when you **want to use some existing class, but its interface isn’t compatible with the rest of your code.**
+*The Adapter pattern lets you create a middle-layer class that serves as a translator between your code and a legacy class, a 3rd-party class or any other class with a weird interface.*
+
+- when you want to reuse several existing subclasses that **lack some common functionality that can’t be added to the superclass.**
+
+- when you need to use several existing subclasses, but it's impractical to adapt their interface by subclassing every one. An object adapter can **adapt the interface of its parent class**. (object adapter only)
 
 ### Consequences
 > A class adapter
@@ -46,7 +53,7 @@ class MyNewClassAdapter extends Adaptee implements Target {
     }
 }
 ~~~
->MyNewClassAdapter method show()
+> MyNewClassAdapter method show()
 
 - An object adapter
 ~~~java
@@ -73,7 +80,7 @@ class MyNewObjectAdapter implements Target {
     }
 }
 ~~~
->Adaptee method show()
+> Adaptee method show()
 
 ### Reference
 - https://refactoring.guru/design-patterns/adapter
