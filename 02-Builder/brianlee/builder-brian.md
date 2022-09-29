@@ -26,7 +26,7 @@
 * 자바 8 Stream.Builder API
 * StringBuilder
 * 롬북 @Builder
-* Sprint
+* Spring
   * UriComponentsBuilder
   * MockMvcWebClientBuilder
   * ... Builder
