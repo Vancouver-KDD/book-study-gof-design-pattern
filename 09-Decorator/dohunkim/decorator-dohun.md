@@ -15,7 +15,7 @@ Attach additional responsibilities to an object dynamically. Decorators provide 
 &nbsp;
 ## 2. Structure
 #### Class diagram
-![Decorator_diagram](./images/Diagram_Decorator.png) "Decorator Diagram")\
+![Decorator_diagram](./images/Diagram_Decorator.png "Decorator Diagram")\
 https://refactoring.guru/design-patterns/decorator<sup>b)</sup>
 
 
