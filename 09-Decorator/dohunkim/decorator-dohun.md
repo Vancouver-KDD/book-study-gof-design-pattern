@@ -112,6 +112,7 @@ namespace Decorator
             ConcreteDecoratorB decorator2 = new ConcreteDecoratorB(decorator1);
             Console.WriteLine("Client: Now I've got a decorated component:");
             client.ClientCode(decorator2);
+            // client.ClientCode(new ConcreteDecoratorB(new ConcreteDecoratorA(new ConcreteConponent())));
         }
     }
 }
@@ -129,11 +130,58 @@ Client Code Result: ConcreteDecoratorB(ConcreteDecoratorA(ConcreteComponent))
 `Real-world example`\
 #TODO: Put sample code below 
 ```c#
+using System;
 
+namespace Decorator_Example
+{
+    public abstract class Component { public abstract string SushiRice(); }
+    class ConcreteComponent : Component {
+        public override string SushiRice() {
+            return "Rice";
+        }
+    }
+    abstract class Decorator : Component {
+        protected Component _component;
+        public Decorator(Component component) {
+            _component = component;
+        }
+        public override string SushiRice() {
+            return _component.SushiRice();
+        }
+    }
+    class SalmonOnTop : Decorator {
+        public SalmonOnTop(Component comp) : base(comp) { }
+        public override string SushiRice() {
+            return $"SalmonOnTop({base.SushiRice()})";
+        }
+    }
+    class Wasabi : Decorator {
+        public Wasabi(Component comp) : base(comp) { }
+        public override string SushiRice() {
+            return $"Wasabi({base.SushiRice()}) - Spicy!";
+        }
+    }
+    public class Client {
+        public void ClientCode(Component component) {
+            Console.WriteLine("Client Code Result: " + component.SushiRice());
+        }
+    }
+    class Program {
+        static void Main(string[] args) {
+            Client client = new Client();
+            //var sushiRice = new ConcreteComponent();
+            //SalmonOnTop salmonOnTop = new SalmonOnTop(sushiRice);
+            //Wasabi wasabi = new Wasabi(salmonOnTop);
+            //client.ClientCode(wasabi);
+            client.ClientCode(new Wasabi(new SalmonOnTop(new ConcreteComponent())));
+        }
+    }
+}
 ```
 
 Output
 ```
+Client Code Result: Wasabi(SalmonOnTop(Rice)) - Spicy!
 ```
 
 &nbsp;
@@ -149,7 +197,8 @@ Output
 
 &nbsp;
 ## 6. Related Patterns
-#TODO: Put realted patterns below
+### Adaptor
+- Adapter changes the interface of an existing object, while Decorator enhances an object without changing its interface. In addition, Decorator supports recursive composition, which isn’t possible when you use Adapter.
 
 &nbsp;
 ## 7. References
