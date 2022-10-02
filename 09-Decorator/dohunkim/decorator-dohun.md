@@ -127,8 +127,7 @@ Client: Now I've got a decorated component:
 Client Code Result: ConcreteDecoratorB(ConcreteDecoratorA(ConcreteComponent))
 ```
 
-`Real-world example`\
-#TODO: Put sample code below 
+`Real-world example`
 ```c#
 using System;
 
