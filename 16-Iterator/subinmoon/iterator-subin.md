@@ -25,6 +25,7 @@ while (namesIterator.hasNext()) {
 ```
 
 ### Iterator 패턴의 구조
+![](./image/structure.png)
 - Iterator
   - Collection의 요소들을 순서대로 검색하기 위한 인터페이스 정의.
 - Concrete Iterators
