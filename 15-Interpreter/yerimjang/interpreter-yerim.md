@@ -16,7 +16,7 @@
 - It's easy to change and extend the grammar.
 - Implementing the grammar is easy, too.
 - Complex grammars are hard to maintain.
-- Adding new ways to interpret exprssions.
+- Adding new ways to interpret expressions.
       - *If you keep creating new ways of interpreting and expression, then consider using the Visitor pattern to avoid changing the grammar classes.*
 
 ### Interpreter VS Composite
@@ -143,6 +143,9 @@ function clientCode() {
   const expression: String = "w x z - +"
   const customCalculator: Evaluator = new Evaluator(expression)
   const variables: Map<String, Expression> = new Map<String, Expression>()
+  variables.set("w", new Value(5))
+  variables.set("x", new Value(10))
+  variables.set("z", new Value(42))
   const result: number = customCalculator.interpret(variables)
   console.log(result)
 }
