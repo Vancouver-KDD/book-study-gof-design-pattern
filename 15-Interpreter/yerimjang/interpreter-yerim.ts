@@ -105,6 +105,9 @@ function clientCode() {
   const expression: String = "w x z - +"
   const customCalculator: Evaluator = new Evaluator(expression)
   const variables: Map<String, Expression> = new Map<String, Expression>()
+  variables.set("w", new Value(5))
+  variables.set("x", new Value(10))
+  variables.set("z", new Value(42))
   const result: number = customCalculator.interpret(variables)
   console.log(result)
 }
