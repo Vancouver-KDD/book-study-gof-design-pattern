@@ -25,14 +25,15 @@ while (namesIterator.hasNext()) {
 ```
 
 ### Iterator 패턴의 구조
+![](./image/structure.png)
 - Iterator
   - Collection의 요소들을 순서대로 검색하기 위한 인터페이스 정의.
 - Concrete Iterators
   - Iterator 인터페이스를 구현한 클래스. 
-- Aggregate
+- Collection
   - 여러 요소들로 이루어져 있는 집합체
-- Concrete Aggregate
-  - Aggregate 인터페이스를 구현한 클래스
+- Concrete Collection
+  - Collection 인터페이스를 구현한 클래스
 - Client
 
 ## How to Implement it?
